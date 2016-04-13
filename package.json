@@ -1,0 +1,22 @@
+{
+  "name": "blog-node",
+  "version": "1.0.0",
+  "description": "A blog using express, hopefully jade and mongodb",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.13.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node_modules/.bin/supervisor app",
+    "test": "mocha ./test/*-test.js"
+},
+  "keywords": [
+    "blog",
+    "node",
+    "express",
+    "jade",
+    "mongodb"
+  ],
+  "author": "Sharon Russell"
+}
