@@ -5,7 +5,9 @@
   "main": "app.js",
   "dependencies": {
     "express": "^4.13.4",
-    "jade": "*"
+    "jade": "^1.11.0",
+    "mocha": "^2.4.5",
+    "chai": "^3.5.0"
   },
   "scripts": {
     "test": "mocha ./test/*-test.js"
@@ -17,5 +19,7 @@
     "jade",
     "mongodb"
   ],
-  "author": "Sharon Russell"
+  "author": "Sharon Russell",
+  "repository": "https://github.com/sharonrussell/blog-node",
+  "private": true
 }
