@@ -1,11 +1,13 @@
 var express = require('express')
   , app = express()
+var Entries = require('../app/entries')
 
 app.set('views', __dirname + '/views')
 app.set('view engine', 'jade');
 
 app.get('/', function (req, res) {
-  res.render('index');
+  var entries = new Entries().get();
+  res.render('index', {"entries": entries['entries']});
 });
 
 app.listen(3000, function() {
