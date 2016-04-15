@@ -11,6 +11,13 @@ p{
 div{
 	text-align: center;
 }
+.nav{
+	background: #602060;
+	padding: 10px;
+}
+a{
+	color: violet;
+}
 body {
     background: #302060;
 	background-size: cover;
