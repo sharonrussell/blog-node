@@ -1,13 +1,17 @@
 var express = require('express')
   , app = express()
-var Entries = require('../app/entries')
+  MongoClient = require('mongodb').MongoClient,
+  assert = require('assert');
 
 app.set('views', __dirname + '/views')
 app.set('view engine', 'jade');
 
-app.get('/', function (req, res) {
-  var entries = new Entries().get();
-  res.render('index', {"entries": entries['entries']});
+MongoClient.connect('mongodb://localhost:27017/blog', function(err, db){
+	app.get('/', function(req, res){
+		db.collection('entries').find({}).toArray(function(err, docs){
+			res.render('index', {'entries' : docs});
+		});
+	});
 });
 
 app.listen(3000, function() {
