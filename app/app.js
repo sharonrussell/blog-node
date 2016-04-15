@@ -35,12 +35,6 @@ app.get('/add', function(req, res){
     res.render('add');
 });
 
-function errorHandler(err, req, res, next) {
-	console.error(err.message);
-	console.error(err.stack);
-	res.status(500).render('error', { error: err });
-};
-
 app.listen(3000, function() {
     console.log('Listening on port 3000...')
 });
