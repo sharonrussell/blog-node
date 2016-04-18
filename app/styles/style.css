@@ -4,6 +4,7 @@ h1{
 h2{
 	font-size: 20px;
 }
-.nav{
-	padding: 20px;
+.date{
+	font-size: 15px;
+	color: darkgray;
 }
