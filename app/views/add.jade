@@ -2,6 +2,10 @@ extends layout
 
 block content
 	form(name="add", action="/Add", method="post")
+		h1 Add a new entry
+		h2 Title
 		input(type="text", name="title")
+		h2 Body
 		input(type="text", name="body")
-		input(type="submit", value="add")
+		div(class="submit")
+			input(type="submit", value="add")

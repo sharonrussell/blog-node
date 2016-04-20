@@ -33,7 +33,6 @@ MongoClient.connect('mongodb://localhost:27017/blog', function(err, db){
 
     app.post('/delete/:id', function (req, res) {
         var id = req.params.id;
-        console.log(id);
         db.collection('entries').remove({"_id": ObjectId(id)});
         res.statusCode = 302;
         res.setHeader("Location", '/');
