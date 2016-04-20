@@ -7,3 +7,5 @@ block content
                 h2 #{entry.title}
                 p #{entry.body}
                 p(class="date") #{entry.date} #{entry.time}
+                form(method='POST', action='/delete/#{entry._id}')
+                    button(type='submit') Delete

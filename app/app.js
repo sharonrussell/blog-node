@@ -2,7 +2,8 @@ var express = require('express')
   , app = express()
   MongoClient = require('mongodb').MongoClient,
   assert = require('assert'),
-  bodyParser = require('body-parser');
+  bodyParser = require('body-parser'),
+  ObjectId = require('mongodb').ObjectId;
 
 app.set('views', __dirname + '/views')
 app.set('view engine', 'jade');
@@ -28,6 +29,15 @@ MongoClient.connect('mongodb://localhost:27017/blog', function(err, db){
             res.setHeader("Location", '/');
             res.end();
         }
+    });
+
+    app.post('/delete/:id', function (req, res) {
+        var id = req.params.id;
+        console.log(id);
+        db.collection('entries').remove({"_id": ObjectId(id)});
+        res.statusCode = 302;
+        res.setHeader("Location", '/');
+        res.end();
     });
 });
 
