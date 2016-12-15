@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 MongoClient.connect('mongodb://localhost:27017/blog', function(err, db){
 	app.get('/', function(req, res){
-		db.collection('entries').find({}).toArray(function(err, docs){
+		db.collection('entries').find({}).sort({'date': -1}).toArray(function(err, docs){
             this._docs = docs;
 			res.render('index', {'entries' : docs});
 		});
