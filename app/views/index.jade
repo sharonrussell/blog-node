@@ -1,13 +1,12 @@
 extends layout
 
 block content
-    div
-        form(method='GET', action='/add')
-            button(type='submit') Add
+    div(class='content')
         each entry, i in entries
             div
                 h2 #{entry.title}
-                p #{entry.body}
-                p(class="date") #{entry.date} #{entry.time}
+                div(class="entry-body")
+                    p #{entry.body}
+                    p(class="date") #{entry.date} #{entry.time}
                 form(method='POST', action='/delete/#{entry._id}')
                     button(type='submit') Delete

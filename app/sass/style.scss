@@ -1,0 +1,41 @@
+h1{
+	font-size: 35px;
+}
+h2{
+	font-size: 20px;
+}
+.date{
+	font-size: 15px;
+	color: darkgray;
+}
+.submit{
+	margin-top: 10px;
+}
+
+.navigation{
+	background: #C2A2C8;
+	li{
+		list-style: none;
+		padding: 10px;
+
+		a{
+			display: inline;
+			top: 10px;
+			color: black;
+			text-decoration: none;
+			margin-right: 10px;
+
+			&:hover{
+				color: #FFF;
+			}
+		}
+	}
+}
+
+.content{
+	padding: 10px;
+}
+
+.entry-body{
+	padding-left: 10px;
+}
