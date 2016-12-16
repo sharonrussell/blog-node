@@ -1,9 +1,10 @@
 extends layout
 
 block content
+    h1 Entries
     div(class='content')
         each entry, i in entries
-            div
+            div(class="entry")
                 h2 #{entry.title}
                 div(class="entry-body")
                     p #{entry.body}
