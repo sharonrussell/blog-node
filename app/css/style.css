@@ -35,3 +35,6 @@ h2 {
 .entry {
   padding: 10px;
   background: ghostwhite; }
+
+textarea {
+  font-size: 14px; }

@@ -4,8 +4,8 @@ block content
 	form(name="add", action="/Add", method="post")
 		div(class="content")
 			h2 Title
-			input(type="text", name="title")
+			textarea(type="text", name="title", rows=2, cols=75)
 			h2 Body
-			input(type="text", name="body")
+			textarea(type="text", name="body", rows=20, cols=75)
 			div(class="submit")
 				input(type="submit", value="Add")
