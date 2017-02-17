@@ -13,8 +13,6 @@ var port = process.env.PORT || 3000;
 var mongouri = process.env.MONGODB_URI || 'mongodb://localhost:27017/blog';
 
 MongoClient.connect(mongouri, function(err, db){
-    console.log(port);
-    if(err) throw err;
 
 	app.get('/', function(req, res){
 		db.collection('entries').find({}).sort({'date': -1}).toArray(function(err, docs){
