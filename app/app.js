@@ -9,6 +9,8 @@ app.set('views', __dirname + '/views')
 app.set('view engine', 'jade');
 app.use(bodyParser.urlencoded({ extended: true }));
 
+var port = process.env.PORT || 3000;
+
 MongoClient.connect('mongodb://localhost:27017/blog', function(err, db){
 	app.get('/', function(req, res){
 		db.collection('entries').find({}).sort({'date': -1}).toArray(function(err, docs){
@@ -44,6 +46,6 @@ app.get('/add', function(req, res){
     res.render('add');
 });
 
-app.listen(3000, function() {
-    console.log('Listening on port 3000...')
+app.listen(port, function() {
+    console.log('Listening on port ' + port)
 });
