@@ -10,7 +10,7 @@ app.set('view engine', 'jade');
 app.use(bodyParser.urlencoded({ extended: true }));
 
 var port = process.env.PORT || 3000;
-var mongouri = process.env.MONGO_URI || 'mongodb://localhost:27017/blog';
+var mongouri = process.env.MONGODB_URI || 'mongodb://localhost:27017/blog';
 
 MongoClient.connect(mongouri, function(err, db){
     console.log(port);
