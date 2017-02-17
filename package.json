@@ -15,7 +15,8 @@
     "gulp-sass": "3.0.0"
   },
   "scripts": {
-    "test": "mocha ./test/*-test.js"
+    "test": "mocha ./test/*-test.js",
+    "start": "node app/app.js"
   },
   "keywords": [
     "blog",
