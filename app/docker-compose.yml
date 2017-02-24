@@ -12,3 +12,5 @@ services:
             - mongo
         ports:
             - "3000:3000"
+
+            
