@@ -1,0 +1,14 @@
+version: "2"
+services:
+    mongo:
+        image: 'mongo:latest'
+        container_name: 'mongo'
+        volumes:
+            - './db:/data/db'
+    app:
+        build: .
+        container_name: 'app'
+        links:
+            - mongo
+        ports:
+            - "3000:3000"
