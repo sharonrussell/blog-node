@@ -37,7 +37,8 @@ body {
 
 .entry {
   padding: 10px;
-  background: ghostwhite; }
+  background: ghostwhite;
+  margin-bottom: 10px; }
 
 textarea {
   font-size: 14px; }
